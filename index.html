@@ -226,8 +226,7 @@
   
     </section><!-- End Services Section -->
 
-   
-              
+       
     <!-- ======= Work Session ======= -->
     <section id="work" class="portfolio-mf sect-pt4 route">
       <div class="container">
@@ -499,7 +498,8 @@
         </div>
       </div>
     </section><!-- End Blog Section -->
-
+    <script>(function(w, d) { w.CollectId = "63a6d80f50094935eaaa08f8"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+   
     <!-- ======= Contact Section ======= -->
     <section
         id="contact"
@@ -513,84 +513,7 @@
               <div class="contact-mf">
                 <div id="contact" class="box-shadow-full">
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="title-box-2">
-                        <h5 class="title-left">Send Message Us</h5>
-                      </div>
-                      <div>
-                        <form
-                        id="submit-form" action=""
-                       class=""
-                       onsubmit=""
-                     >
-                       <div class="row">
-                         <div class="col-md-12 mb-3">
-                           <div class="form-group">
-                             <input
-                               type="text"
-                               name="name"
-                               class="form-control"
-                               id="name"
-                               onkeyup=" nameValidation()"
-                               onkeydown="preventNumberInput(event)"
-                               placeholder="Your Name"
-                             />
-                             <label style="color: red;" for="" id="errorMsg"></label>
-                             </div>
-                           </div>
-                         </div>
-                         <div class="col-md-12 mb-3">
-                           <div class="form-group">
-                             <input
-                               type="email"
-                               class="form-control"
-                               name="email"
-                               id="email"
-                               onkeyup=" emailvalidate()"
-                               placeholder="Your Email"
-                             />
-                             <label style="color: red;" for="" id="emailerrormsg"></label>
-                           </div>
-                         </div>
-                         <div class="col-md-12 mb-3">
-                           <div class="form-group">
-                             <input
-                               class="form-control"
-                               name="Number"
-                               id="number"
-                               placeholder="Number"
-                               onkeyup=" numberValidation()"
-                             
-                             />
-                             <label style="color: red;" for="" id="NumebeErrorMsg"></label>
-                           </div>
-                         </div>
-                         <div class="col-md-12">
-                           <div class="form-group">
-                             <textarea
-                               class="form-control"
-                               name="message"
-                               rows="5"
-                               id="message"
-                               onkeyup=" msgValidation()"
-                               placeholder="Message"
-                             ></textarea>
-                             <label style="color: red;" for="" id="MessageError"></label>
-                           </div>
-                         </div>
-                         <div class="col-md-12 text-center">
-                           <button
-                             type="submit"
-                             onclick="validate()"
-                             class="button button-a button-big button-rouded"
-                           >
-                             Send Message
-                           </button>
-                         </div>
-                       </div>
-                     </form>
-                      </div>
-                   
+                    
                     <div class="col-md-6">
                       <div class="title-box-2 pt-4 pt-md-0">
                         <h5 class="title-left">Get in Touch</h5>
@@ -647,6 +570,18 @@
                       </div>
                     </div>
 
+                    <div class="col-md-6">
+                      <div class="title-box-2 pt-4 pt-md-0">
+                        <h5 class="title-left">Chat with Me</h5>
+                      </div>
+                      <div class="more-info">
+                        <ul class="list-ico">
+                          <li> If you want to chat with me, chat with the chatbot..
+                          </li>
+                        </ul>
+                      </div>
+                                       
+
                   </div>
                   </div>
                 </div>
@@ -656,14 +591,11 @@
         </div>
      </section>
       <!-- End Contact Section -->
-<script>(function(w, d) { w.CollectId = "63a6d80f50094935eaaa08f8"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 
   </main><!-- End #main -->
 
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+ 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -682,115 +614,6 @@
     
 
     <script >
-
-function validate(){
-  
-    if( msgValidation() == true && numberValidation() == true && emailvalidate() == true && nameValidation() == true ){
-     
-        // alert("in true")
-        
-        
-    $.ajax({
-      
-        url:"https://script.google.com/macros/s/AKfycbx8to-bIElSb0-ywBfH9xhnvVwSNQstqwYOtRM4ldBM66alXdbs-6rS_qj7JjvVBPRI/exec",
-        data:$("#submit-form").serialize(),
-        method:"post",
-        
-        success:function(response){
-            alert("Form submitted successfully")
-            window.location.reload();
-            // console.log("in this submit form")
-            //window.location.href="https://google.com"
-        },
-        error:function (err){
-            alert("Please enter the values")
-   
-            // console.log("in this error")
-
-        }
-    })
-    window.location = "#hero"
-    alert("Form Submit Successfully");
-  }else{
-    window.location = "#contact"
-    alert("Please enter Details")
-    
-  }
-    }
-
-    function preventNumberInput(e){
-      var keycode = (e.keycode ? e.keycode : e.which);
-      if(keycode > 47 && keycode < 58 || keycode > 95 && keycode <107){
-        e.preventDefault();
-      }
-    }
-
-
-    function nameValidation(){
-    var name = document.getElementById("name").value;
-    var pattern = /^[a-zA-Z\\s]/;
-
-    if(name == ""){
-        document.getElementById("errorMsg").innerHTML("Name is mandatory");
-        return false;
-    }
-    else if(name.match(pattern)){
-        document.getElementById("errorMsg").innerHTML="";
-        return true;
-    }
-    else{
-        document.getElementById("errorMsg").innerHTML = "Enter correct name";
-        return false;
-    }
-}
-
-
-function emailvalidate(){
-    var email = document.getElementById("email").value;
-    var emailPattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
-    if(email == ""){
-        document.getElementById("emailerrormsg").innerHTML = "Email is mandatory"
-        return false;
-    }else if(email.match(emailPattern)){
-        document.getElementById("emailerrormsg").innerHTML = "";
-        return true;
-    }else{
-        document.getElementById("emailerrormsg").innerHTML = "Enter correct Email"
-        return false;
-    }
-}
-
-
-function numberValidation(){
-    var number = document.getElementById("number").value;
-    var NumberPattern =  /^\d{10}$/;
-
-    if(number == ""){
-        document.getElementById("NumebeErrorMsg").innerHTML= "Number is mandatory"
-        return false;
-    }else if(number.match(NumberPattern)){
-        document.getElementById("NumebeErrorMsg").innerHTML="";
-        return true;
-    }else{
-        document.getElementById("NumebeErrorMsg").innerHTML = "Enter Correct Number"
-        return false;
-    }
-    
-}
-
-function msgValidation(){
-    var message = document.getElementById("message").value;
-
-    if( message == ""){
-        document.getElementById("MessageError").innerHTML = "Please Write Something.."
-        return false;
-    }else{
-        document.getElementById("MessageError").innerHTML = "";
-        return true;
-    }
-}
-
 
 
     </script>
