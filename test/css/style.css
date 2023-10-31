@@ -1,0 +1,461 @@
+/* Reset some default styles */
+/* Reset margin and padding for various HTML elements */
+html, body, div, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+    width: 100%;
+    background-color: #f0f0f0; /* Background color */
+    color: #333; /* Text color */
+    /* The following lines are commented out, use one of them if needed */
+    /* font-family: "Lucida Console", Courier, monospace; */
+    /* font-family: 'Merriweather Sans', sans-serif; */
+}
+
+/* Style for the images in the cards */
+.img1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+/* About section */
+.about {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.people {
+    margin: 20px;
+}
+
+/* Centered image */
+.center-image {
+    margin: 30px;
+}
+
+/* Button style */
+button {
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Card footer style */
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#category-img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+/* Category card style */
+.card-body {
+    padding-left: 10px;
+}
+
+.category {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* The following lines are commented out, use if needed */
+    /* width: 300px; */
+    /* height: 330px; */
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+/* Last section style */
+.last {
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Styles for the email subscription section */
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 767px) {
+    .people {
+        display: none; /* Hide the image on screens with a maximum width of 767px (typical mobile view) */
+    }
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.logo {
+    margin-top: 60px;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    width: 100%;
+}
+
+.email .input-group {
+    width: 100%;
+}
+
+.email input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.email button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 10%;
+}
+
+.footer h5 {
+    color: #fff; /* Text color for section titles */
+}
+
+.contact,
+.text-muted {
+    margin-bottom: 10px;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin-left: 10px;
+}
+
+.custom-padding {
+    padding-left: 80px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact img {
+    margin-right: 0.5rem;
+}
+
+.text-muted {
+    margin-bottom: 1rem;
+}
+
+.custom-padding-left {
+    padding-left: 2rem; /* Adjust the value as needed */
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Keyframes for animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        max-width: 100%;
+    }
+
+    .custom-padding {
+        padding-left: 20px;
+    }
+
+    .custom-padding-left {
+        padding-left: 20px;
+    }
+}
+
+/* Add this rule to apply zoom effect on hover for cards */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Add this rule to adjust the font size of the headings within cards */
+.card-title, .card-subtitle, .fs-8 {
+    font-size: 1.2rem;
+}
+
+.col-md-4 {
+    width: 33.3333%;
+    float: left;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: left; /* Align text to the left */
+}
+
+#category-img {
+    max-width: 100%; /* Make the image as wide as the card */
+    max-height: 100%; /* Make the image as tall as the card */
+    display: block;
+    margin: 0 auto;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Additional styles for the "Check our Store" button */
+.btn-responsive {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-effect {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-effect:hover {
+    background-color: #FFA500; /* Change background color on hover */
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+.image {
+    flex: 1;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .content, .image {
+        flex: none;
+        width: 100%;
+    }
+}
+
+.custom-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.custom-card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-card-image img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.custom-card-info {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.custom-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-card-price {
+    color: orange;
+}
+
+.custom-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: darkorange;
+}
+
+/* Browse Card Styles */
+.browse-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.browse-cardhead {
+    display: flex;
+    align-items: center;
+}
+
+.browse-cardhead img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.name {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.price h6 {
+    color: orange;
+}
+
+.btn-responsive {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-responsive:hover {
+    background-color: darkorange;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .custom-card,
+    .browse-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.responsive-image {
+    max-width: 100%; /* Ensures the image never exceeds its parent container's width */
+    height: auto;    /* Maintains the aspect ratio */
+}
+
+/* styles.css */
+
+.discount-cardbody.topcart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.circle-image {
+    flex: 1;
+    text-align: center;
+}
+
+.circle-image img {
+    border-radius: 50%;
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    object-fit: cover;
+}
+
+.text-content {
+    flex: 2;
+    padding: 0 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Apply a common font family to various elements */
+body, h1, h2, h3, h4, h5, h6, b, p, a, button, .masthead, .card-title, .card-subtitle, .card-body, .card-footer, .navbar-brand, .nav-link, .btn {
+    font-family: "Cambria", sans-serif;
+}
+
