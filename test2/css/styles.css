@@ -1,0 +1,743 @@
+/* Reset some default styles */
+/* Reset margin and padding for various HTML elements */
+html, body, div, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+    width: 100%;
+    background-color: #f0f0f0; /* Background color */
+    color: #333; /* Text color */
+    /* The following lines are commented out, use one of them if needed */
+    /* font-family: "Lucida Console", Courier, monospace; */
+    /* font-family: 'Merriweather Sans', sans-serif; */
+}
+
+/* Style for the images in the cards */
+.img1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+/* About section */
+.about {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.people {
+    margin: 20px;
+}
+
+/* Centered image */
+.center-image {
+    margin: 30px;
+}
+
+/* Button style */
+button {
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Card footer style */
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#category-img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+/* Category card style */
+.card-body {
+    padding-left: 10px;
+}
+
+.category {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* The following lines are commented out, use if needed */
+    /* width: 300px; */
+    /* height: 330px; */
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+/* Last section style */
+.last {
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Styles for the email subscription section */
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 767px) {
+    .people {
+        display: none; /* Hide the image on screens with a maximum width of 767px (typical mobile view) */
+    }
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.logo {
+    margin-top: 60px;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    width: 100%;
+}
+
+.email .input-group {
+    width: 100%;
+}
+
+.email input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.email button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 10%;
+}
+
+.footer h5 {
+    color: #fff; /* Text color for section titles */
+}
+
+.contact,
+.text-muted {
+    margin-bottom: 10px;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin-left: 10px;
+}
+
+.custom-padding {
+    padding-left: 80px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact img {
+    margin-right: 0.5rem;
+}
+
+.text-muted {
+    margin-bottom: 1rem;
+}
+
+.custom-padding-left {
+    padding-left: 2rem; /* Adjust the value as needed */
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Keyframes for animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        max-width: 100%;
+    }
+
+    .custom-padding {
+        padding-left: 20px;
+    }
+
+    .custom-padding-left {
+        padding-left: 20px;
+    }
+}
+
+/* Add this rule to apply zoom effect on hover for cards */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Add this rule to adjust the font size of the headings within cards */
+.card-title, .card-subtitle, .fs-8 {
+    font-size: 1.2rem;
+}
+
+.col-md-4 {
+    width: 33.3333%;
+    float: left;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: left; /* Align text to the left */
+}
+
+#category-img {
+    max-width: 100%; /* Make the image as wide as the card */
+    max-height: 100%; /* Make the image as tall as the card */
+    display: block;
+    margin: 0 auto;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Additional styles for the "Check our Store" button */
+.btn-responsive {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-effect {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-effect:hover {
+    background-color: #FFA500; /* Change background color on hover */
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+.image {
+    flex: 1;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .content, .image {
+        flex: none;
+        width: 100%;
+    }
+}
+
+.custom-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.custom-card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-card-image img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.custom-card-info {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.custom-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-card-price {
+    color: orange;
+}
+
+.custom-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: darkorange;
+}
+
+/* Browse Card Styles */
+.browse-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.browse-cardhead {
+    display: flex;
+    align-items: center;
+}
+
+.browse-cardhead img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.name {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.price h6 {
+    color: orange;
+}
+
+.btn-responsive {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-responsive:hover {
+    background-color: darkorange;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .custom-card,
+    .browse-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.responsive-image {
+    max-width: 100%; /* Ensures the image never exceeds its parent container's width */
+    height: auto;    /* Maintains the aspect ratio */
+}
+
+/* styles.css */
+
+.discount-cardbody.topcart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.circle-image {
+    flex: 1;
+    text-align: center;
+}
+
+.circle-image img {
+    border-radius: 50%;
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    object-fit: cover;
+}
+
+.text-content {
+    flex: 2;
+    padding: 0 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Apply a common font family to various elements */
+body, h1, h2, h3, h4, h5, h6, b, p, a, button, .masthead, .card-title, .card-subtitle, .card-body, .card-footer, .navbar-brand, .nav-link, .btn {
+    font-family: "Cambria", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .brand:hover{
+    color: #d4c009;
+}
+
+header .navigation{
+    position: relative;
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+    background:orange;
+}
+
+section{
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: or(0, 140, 255, 0.959);
+}
+
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(251, 3, 3, 0.034);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home .content{
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+
+.home .content.active{
+    display: block;
+}
+
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.home .content p{
+    margin-bottom: 65px;
+}
+
+.home .content a{
+    background: #fff;
+    padding: 15px 35px;
+    color: orange;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home .content a:hover{
+    background: orange;
+    color: #fff;
+}
+
+.home .media-icons{
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .media-icons a{
+    color: #fff;
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+    transform: scale(1.3);
+    color: #09a6d4;
+}
+
+.home img{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+    background: orange;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+
+.img-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation .navigation-items a:before{
+        background: #222;
+        height: 5px;
+    }
+    header .navigation .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+    .menu-btn{
+        background: url(menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background: url(close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+
+@media (max-width: 560px){
+    .home .content h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
+}
