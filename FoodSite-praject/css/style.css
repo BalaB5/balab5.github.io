@@ -343,7 +343,7 @@ footer {
 }
 
 .custom-card {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 10px;
 }
 
@@ -388,7 +388,7 @@ footer {
 
 /* Browse Card Styles */
 .browse-card {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 10px;
 }
 
