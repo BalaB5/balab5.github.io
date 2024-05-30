@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background-color: #ebccc2;
+  background-color: #d2c2eb;
   color: #000000;
 }
 
@@ -34,7 +34,7 @@ a {
   transition: all 0.5s ease-in-out;
 }
 a:hover {
-  color: #ff5100;
+  color: #200092;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -45,7 +45,7 @@ a:hover {
 
 .color-a {
   text-decoration: none;
-  color: #ff5100;
+  color: #200092;
 }
 
 .color-d {
@@ -103,7 +103,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #ff5100;
+  background-color: #200092;
 }
 
 .overlay-mf {
@@ -172,7 +172,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #ff5100;
+  background-color: #200092;
   margin: 0 auto;
 }
 
@@ -189,7 +189,7 @@ a:hover {
   content: "";
   position: absolute;
   height: 3px;
-  background-color: #ff5100;
+  background-color: #200092;
   width: 100px;
   bottom: -12px;
 }
@@ -227,11 +227,11 @@ a:hover {
   border-radius: 50%;
   line-height: 1.6;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #ff5100;
+  box-shadow: 0 0 0 3px #200092;
   transition: all 500ms ease;
 }
 .socials .ico-circle:hover {
-  background-color: #ff5100;
+  background-color: #200092;
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
@@ -248,7 +248,7 @@ a:hover {
   line-height: 2;
 }
 .list-ico span {
-  color: #ff5100;
+  color: #200092;
   margin-right: 10px;
 }
 
@@ -261,7 +261,7 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #ff5100;
+  box-shadow: 0 0 0 10px #200092;
   display: block;
 }
 
@@ -301,7 +301,7 @@ a:hover {
   position: fixed;
   width: 42px;
   height: 42px;
-  background-color: #ff5100;
+  background-color: #200092;
   opacity: 0.7;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -325,7 +325,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ff5100;
+  background: #200092;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -337,7 +337,7 @@ a:hover {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #ff5100;
+  background: #200092;
   color: #fff;
 }
 .back-to-top.active {
@@ -363,7 +363,7 @@ a:hover {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
-  border-top: 6px solid #ff5100;
+  border-top: 6px solid #200092;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -407,14 +407,14 @@ a:hover {
   outline: 0;
 }
 .button:hover {
-  background-color: #ff5100;
+  background-color: #200092;
   color: #fff;
   transition: all 500ms ease;
 }
 
 .button-a {
   text-decoration: none;
-  background-color: #ff5100;
+  background-color: #200092;
   color: #fff;
   border-color: #cde1f8;
 }
@@ -549,7 +549,7 @@ a:hover {
   font-size: 12px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #ff5100;
+  color: #200092;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -637,7 +637,7 @@ a:hover {
   color: #4e4e4e;
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #ff5100;
+  color: #200092;
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
@@ -663,7 +663,7 @@ a:hover {
   font-size: 12px;
 }
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #ff5100;
+  color: #200092;
 }
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
@@ -731,7 +731,7 @@ a:hover {
 }
 .hero-single .breadcrumb {
   background-color: transparent;
-  color: #ff5100;
+  color: #200092;
 }
 .hero-single .breadcrumb .breadcrumb-item:before {
   color: #cde1f8;
@@ -774,7 +774,7 @@ a:hover {
 }
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #ff5100;
+  background-color: #200092;
 }
 
 /*--------------------------------------------------------------
@@ -790,7 +790,7 @@ a:hover {
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #ff5100;
+  background-color: #200092;
   box-shadow: 0 0 0 10px #cde1f8;
 }
 .service-box .service-ico {
@@ -874,15 +874,15 @@ a:hover {
   font-size: 0.8rem;
 }
 .work-content .w-more .w-ctegory {
-  color:#ff5100;
+  color:#200092;
 }
 .work-content .w-like {
   font-size: 2.5rem;
-  color:#ff5100;
+  color:#200092;
   float: right;
 }
 .work-content .w-like a {
-  color: #ff5100;
+  color: #200092;
 }
 .work-content .w-like .num-like {
   font-size: 0.7rem;
@@ -910,10 +910,10 @@ a:hover {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #ff5100;
+  border: 1px solid #200092;
 }
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff5100;
+  background-color: #200092;
 }
 .portfolio-details .portfolio-info {
   padding: 30px;
@@ -969,7 +969,7 @@ a:hover {
 }
 .testimonial-box .comit {
   font-size: 2rem;
-  color: #ff5100;
+  color: #200092;
   background-color: #fff;
   width: 52px;
   height: 52px;
@@ -1067,7 +1067,7 @@ a:hover {
   font-size: 14px;
 }
 .php-email-form input:focus, .php-email-form textarea:focus {
-  border-color: #ff5100;
+  border-color: #200092;
 }
 .php-email-form input {
   padding: 10px 15px;
@@ -1077,14 +1077,14 @@ a:hover {
   margin-bottom: 0;
 }
 .php-email-form button[type=submit] {
-  background: #ff5100;
+  background: #200092;
   border: 0;
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
 }
 .php-email-form button[type=submit]:hover {
-  background: #ff510094;
+  background: #20009294;
 }
 
 
@@ -1131,7 +1131,7 @@ a:hover {
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color:#ff5100;
+  background-color:#200092;
   border-radius: 4px;
 }
 .card-blog .card-category .category {
@@ -1175,7 +1175,7 @@ a:hover {
   margin: 1rem 0;
 }
 .blog-wrapper .post-meta ul {
-  border-left: 4px solid #ff5100;
+  border-left: 4px solid #200092;
   margin-top: 1rem;
 }
 .blog-wrapper .post-meta ul li {
@@ -1183,13 +1183,13 @@ a:hover {
   margin-left: 15px;
 }
 .blog-wrapper .post-meta ul a {
-  color: #ff5100;
+  color: #200092;
 }
 .blog-wrapper .post-meta ul span {
   color: #1e1e1e;
 }
 .blog-wrapper .blockquote {
-  border-left: 4px solid #ff5100;
+  border-left: 4px solid #200092;
   padding: 18px;
   font-style: italic;
 }
@@ -1220,7 +1220,7 @@ a:hover {
   padding-left: 25px;
 }
 .box-comments .list-comments a {
-  color: #ff5100;
+  color: #200092;
 }
 .box-comments .list-comments span {
   color: #1e1e1e;
@@ -1234,7 +1234,7 @@ a:hover {
 .widget-sidebar .sidebar-title {
   font-size: 1.6rem;
   font-weight: 600;
-  border-left: 5px solid #ff5100;
+  border-left: 5px solid #200092;
   padding-left: 15px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -1249,7 +1249,7 @@ a:hover {
   width: 10px;
   height: 1px;
   left: 0;
-  background-color: #ff5100;
+  background-color: #200092;
   top: 20px;
 }
 
@@ -1259,8 +1259,8 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 .sidebar-search .btn-search {
-  background-color: #ff5100;
-  border-color: #ff5100;
+  background-color: #200092;
+  border-color: #200092;
   border-radius: 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -1268,7 +1268,7 @@ a:hover {
 
 .widget-tags ul li {
   display: inline-block;
-  background-color: #ff5100;
+  background-color: #200092;
   padding: 0.2rem 0.6rem;
   margin-bottom: 0.5rem;
   border-radius: 15px;
