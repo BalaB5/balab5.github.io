@@ -16,7 +16,7 @@
 
 
 body {
-  background-color: #f9cec5;
+  background-color: #ffab99bf;
   color: #000000;
 }
 
@@ -866,11 +866,11 @@ a:hover {
 }
 
 .about-mf .about-img {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 @media (min-width: 767px) {
