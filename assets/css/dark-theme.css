@@ -1,0 +1,262 @@
+/* Modern Premium Dark Theme Overrides */
+:root {
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --card-bg: rgba(30, 41, 59, 0.65);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-main) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .title-left, .title-s, .s-title, .w-title, .card-title, .logo a {
+  color: var(--text-main) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+a {
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: var(--accent-hover) !important;
+}
+
+p, span, li, .lead {
+  color: var(--text-muted) !important;
+}
+
+/* Glassmorphism Cards */
+.box-shadow-full, .service-box, .work-box, .card-blog, .portfolio-info, .post-box, .widget-sidebar {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  border-radius: 16px !important;
+  color: var(--text-main) !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.box-shadow-full:hover, .service-box:hover, .work-box:hover, .card-blog:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Typographic Highlights */
+.title-left:before {
+  background: var(--accent-gradient) !important;
+}
+
+.line-mf {
+  background: var(--accent-gradient) !important;
+  height: 4px !important;
+  border-radius: 2px;
+}
+
+/* Badges / Categories */
+.card-blog .card-category {
+  background: var(--accent-gradient) !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
+  border: none !important;
+}
+.card-blog .card-category .category {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* About Section Text fix */
+.about-info p span {
+  color: var(--text-muted) !important;
+}
+.about-info p .title-s {
+  color: var(--text-main) !important;
+}
+.list-ico span {
+  color: var(--accent) !important;
+}
+
+/* Service Box Icos */
+.service-box .ico-circle {
+  box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.2) !important;
+  color: var(--text-main) !important;
+  transition: all 0.4s ease !important;
+}
+.service-box:hover .ico-circle {
+  background: var(--accent-gradient) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 10px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Progress Bars */
+.progress {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 10px !important;
+  height: 8px !important;
+  overflow: visible !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+.progress-bar {
+  background: var(--accent-gradient) !important;
+  border-radius: 10px !important;
+  position: relative;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5) !important;
+}
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+}
+
+/* Header Navbar */
+#header {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(15px) !important;
+  border-bottom: 1px solid var(--card-border) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  padding: 15px 0 !important;
+}
+.navbar a, .navbar a:focus {
+  color: var(--text-muted) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+}
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+  color: var(--accent) !important;
+}
+.navbar .dropdown ul {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 8px;
+}
+.navbar-mobile {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(15px) !important;
+}
+.navbar-mobile ul {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 12px;
+}
+.mobile-nav-toggle {
+  color: var(--text-main) !important;
+}
+
+/* Overlays */
+.overlay-mf, .overlay-itro {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+}
+
+/* Hero Section */
+#demotext .hero-title {
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
+  text-shadow: none !important;
+}
+.hero-subtitle {
+  color: var(--accent-hover) !important;
+}
+.typed-cursor {
+  color: var(--accent) !important;
+}
+
+/* Social Icons */
+.socials .ico-circle {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--card-border);
+}
+.socials .ico-circle:hover {
+  background: var(--accent-gradient) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5) !important;
+  transform: scale(1.1);
+}
+
+/* Scrolltop Button */
+.scrolltop-mf span {
+  background: var(--accent-gradient) !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Forms */
+.php-email-form input, .php-email-form textarea {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-main) !important;
+  border-radius: 8px !important;
+}
+.php-email-form input:focus, .php-email-form textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.php-email-form button[type=submit] {
+  background: var(--accent-gradient) !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 12px 30px !important;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3) !important;
+}
+.php-email-form button[type=submit]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* Misc Fixes */
+.work-img img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.w-more {
+  color: var(--text-muted) !important;
+}
+.w-ctegory {
+  color: var(--accent) !important;
+}
+.w-like a {
+  color: var(--accent) !important;
+}
+
+/* Timeline/Experience overrides */
+.card-blog .card-description {
+  color: var(--text-muted) !important;
+  line-height: 1.6;
+}
+.card-blog .card-title a {
+  color: var(--text-main) !important;
+  font-size: 1.25rem;
+}
+.card-blog .card-title a:hover {
+  color: var(--accent-hover) !important;
+}
+
+/* Adjust card body to remove hardcoded heights from style.css */
+.mybox {
+  height: auto !important;
+  min-height: 280px;
+}
