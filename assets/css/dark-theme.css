@@ -15,12 +15,12 @@
 body {
   background-color: var(--bg-color) !important;
   color: var(--text-main) !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Nunito', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6, .title-left, .title-s, .s-title, .w-title, .card-title, .logo a {
   color: var(--text-main) !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Nunito', sans-serif !important;
   font-weight: 600 !important;
 }
 
@@ -135,7 +135,7 @@ p, span, li, .lead {
 }
 .navbar a, .navbar a:focus {
   color: var(--text-muted) !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Nunito', sans-serif !important;
   font-weight: 500 !important;
   text-transform: none !important;
   letter-spacing: 0.5px !important;

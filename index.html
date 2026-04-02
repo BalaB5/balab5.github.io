@@ -21,12 +21,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/dark-theme.css" rel="stylesheet">
+  <link id="dark-theme-style" href="assets/css/dark-theme.css" rel="stylesheet">
+  <script>
+    // Apply theme immediately. Default is dark, switch to light if chosen.
+    if (localStorage.getItem('theme') === 'light') {
+      document.getElementById('dark-theme-style').setAttribute('disabled', 'true');
+    }
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -50,7 +56,11 @@
           <li><a class="nav-link scrollto" href="#work">Works</a></li>
           <li><a class="nav-link scrollto " href="#blog">Education</a></li>
           <li><a class="nav-link scrollto " href="#contact">Contact</a></li>
-
+          <li>
+            <button id="theme-toggle" class="nav-link border-0 bg-transparent ms-md-3 theme-toggle-btn" aria-label="Toggle Theme" style="cursor: pointer;">
+              <i class="bi bi-sun-fill fs-5 theme-icon"></i>
+            </button>
+          </li>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </ul>
       </nav><!-- .navbar -->
@@ -693,8 +703,40 @@
 
 
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const darkThemeLink = document.getElementById('dark-theme-style');
+      const icon = themeToggleBtn.querySelector('i');
 
+      // Check current theme state on load to set correct icon
+      if (localStorage.getItem('theme') === 'light') {
+          icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+      }
 
+      themeToggleBtn.addEventListener('click', () => {
+          const isDisabled = darkThemeLink.hasAttribute('disabled');
+          
+          // Add simple transition effect
+          document.body.style.transition = 'background-color 0.4s ease, color 0.4s ease';
+
+          if (isDisabled) {
+              // Switch to Dark
+              darkThemeLink.removeAttribute('disabled');
+              localStorage.setItem('theme', 'dark');
+              icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+          } else {
+              // Switch to Light
+              darkThemeLink.setAttribute('disabled', 'true');
+              localStorage.setItem('theme', 'light');
+              icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+          }
+          
+          // Remove transition after it's done so resizing etc isn't delayed
+          setTimeout(() => {
+             document.body.style.transition = '';
+          }, 400);
+      });
+    });
   </script>
 
 </body>
