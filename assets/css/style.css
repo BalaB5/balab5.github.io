@@ -74,8 +74,7 @@ a:hover {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
 .mybox{
-  width: 414p.39px;
-  height: 282.23px;
+  height: 100%;
 }
 
 .box-shadow-a,

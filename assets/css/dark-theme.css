@@ -260,3 +260,71 @@ p, span, li, .lead {
   height: auto !important;
   min-height: 280px;
 }
+
+/* --- Added for HR Attractive Update --- */
+.hero-cta a {
+  font-weight: 600;
+}
+
+.hero-btn-main {
+  background: var(--accent-gradient) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.hero-btn-main:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6) !important;
+  color: #fff !important;
+}
+
+.hero-btn-outline {
+  border: 2px solid var(--text-muted) !important;
+  background: transparent !important;
+  color: var(--text-main) !important;
+  transition: all 0.3s ease !important;
+}
+.hero-btn-outline:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Custom bullet lists for Experience */
+.custom-bullet-list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  list-style-type: none;
+}
+.custom-bullet-list li::before {
+  content: '▹';
+  position: absolute;
+  left: -20px;
+  color: var(--accent);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Skill badges */
+.skills-container .badge {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+}
+.skills-container .badge.bg-primary { background-color: rgba(59, 130, 246, 0.2) !important; color: #60a5fa !important; border-color: rgba(96, 165, 250, 0.3) !important;}
+.skills-container .badge.bg-secondary { background-color: rgba(139, 92, 246, 0.2) !important; color: #a78bfa !important; border-color: rgba(167, 139, 250, 0.3) !important;}
+.skills-container .badge.bg-dark { background-color: rgba(15, 23, 42, 0.8) !important; color: #cbd5e1 !important;}
+.skills-container .badge.bg-info { background-color: rgba(14, 165, 233, 0.2) !important; color: #38bdf8 !important; border-color: rgba(56, 189, 248, 0.3) !important;}
+.skills-container .badge.bg-warning { background-color: rgba(245, 158, 11, 0.2) !important; color: #fbbf24 !important; border-color: rgba(251, 191, 36, 0.3) !important;}
+.skills-container .badge.bg-light { background-color: rgba(248, 250, 252, 0.1) !important; color: #f8fafc !important; }
+
+.skills-container .badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
