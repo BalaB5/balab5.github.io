@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/dp.jpeg" rel="icon">
+  <link href="assets/img/profile.jpeg" rel="icon">
   <link href="assets/img/profile.jpeg" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
@@ -18,15 +18,17 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link id="dark-theme-style" href="assets/css/dark-theme.css" rel="stylesheet">
+  
+  <!-- GSAP & Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
   <script>
     // Apply theme immediately. Default is dark, switch to light if chosen.
     if (localStorage.getItem('theme') === 'light') {
@@ -54,8 +56,9 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#work">Works</a></li>
-          <li><a class="nav-link scrollto " href="#blog">Education</a></li>
-          <li><a class="nav-link scrollto " href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
+          <li><a class="nav-link scrollto" href="#academic">Education</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li>
             <button id="theme-toggle" class="nav-link border-0 bg-transparent ms-md-3 theme-toggle-btn" aria-label="Toggle Theme" style="cursor: pointer;">
               <i class="bi bi-sun-fill fs-5 theme-icon"></i>
@@ -69,21 +72,20 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/bg-img.jpeg)">
+  <div id="hero" class="hero route">
+    <canvas id="three-canvas"></canvas>
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <div id="demotext">
+          <div id="demotext" class="animate-in">
             <h1 class="hero-title mb-4">I am Balamurugan R</h1>
           </div>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Flutter Developer, Mobile App Engineer, Cross-Platform Specialist"></span></p>
-          <div class="hero-cta mt-5">
-            <a href="#about" class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-3 js-scroll hero-btn-main shadow-lg">View My Work</a>
+          <p class="hero-subtitle animate-in"><span class="typed" data-typed-items="Flutter Developer, Mobile App Engineer, Cross-Platform Specialist"></span></p>
+          <div class="hero-cta mt-5 animate-in">
+            <a href="#work" class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-3 js-scroll hero-btn-main shadow-lg">View My Work</a>
             <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 js-scroll hero-btn-outline shadow-lg">Contact Me</a>
           </div>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
       </div>
     </div>
@@ -94,6 +96,16 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about-mf sect-pt4 route">
       <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                About Me
+              </h3>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-12">
             <div class="box-shadow-full">
@@ -187,6 +199,16 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services-mf pt-5 route">
       <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Profile Focus
+              </h3>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-4">
             <div class="service-box">
@@ -462,7 +484,7 @@
     </section>
 
     <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog-mf sect-pt4 route">
+    <section id="experience" class="blog-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -554,7 +576,7 @@
       </div>
     </section><!-- End Blog Section -->
 
-    <section id="blog" class="blog-mf sect-pt4 route">
+    <section id="academic" class="blog-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -622,8 +644,6 @@
       </div>
     </section><!-- End Blog Section -->
 
-    <script>
-      (function (w, d) { w.CollectId = "63a6d80f50094935eaaa08f8"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async = true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
@@ -696,6 +716,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/three-scene.js"></script>
   <script src="assets/js/noprint.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

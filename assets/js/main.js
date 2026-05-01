@@ -221,4 +221,72 @@
     });
   }
 
+  /**
+   * GSAP Scroll Animations
+   */
+  window.addEventListener('load', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Reveal sections
+    const revealSections = select('section', true);
+    revealSections.forEach(section => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power3.out"
+      });
+    });
+
+    // Animate cards individually
+    const revealCards = select('.service-box, .work-box, .card-blog', true);
+    revealCards.forEach(card => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        opacity: 0,
+        scale: 0.9,
+        y: 30,
+        duration: 0.8,
+        ease: "back.out(1.7)"
+      });
+
+      // 3D Tilt Effect
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+
+        gsap.to(card, {
+          rotateX: rotateX,
+          rotateY: rotateY,
+          duration: 0.5,
+          ease: "power2.out",
+          transformPerspective: 1000
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          rotateX: 0,
+          rotateY: 0,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+    });
+  });
+
 })()
