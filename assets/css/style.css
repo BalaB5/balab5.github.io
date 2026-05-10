@@ -548,7 +548,7 @@ a:hover {
 }
 
 .hero-btn-main {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
+  background: linear-gradient(135deg, #6366f1, #a855f7) !important;
   color: white !important;
   border: none;
   box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
@@ -579,14 +579,14 @@ a:hover {
 }
 
 .hero-btn-outline {
-  border: 2px solid var(--text-main) !important;
-  color: var(--text-main) !important;
+  border: 2px solid #020617 !important;
+  color: #020617 !important;
   background: transparent;
   transition: all 0.3s ease;
 }
 
 .hero-btn-outline:hover {
-  background: var(--text-main);
+  background: #020617;
   color: white !important;
 }
 
@@ -924,7 +924,7 @@ a:hover {
 }
 
 .hero .hero-title {
-  color: var(--text-main);
+  color: #020617;
   font-weight: 800;
   font-size: 3.5rem;
   letter-spacing: -0.02em;
@@ -939,7 +939,7 @@ a:hover {
 
 .hero .hero-subtitle {
   font-size: 1.25rem;
-  color: var(--primary-color);
+  color: #6366f1;
   font-weight: 500;
   margin-bottom: 2rem;
 }

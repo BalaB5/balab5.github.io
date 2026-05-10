@@ -33,21 +33,6 @@ body {
   background: var(--primary-color) !important;
 }
 
-.hero-btn-main {
-  background: var(--primary-color) !important;
-  border: none !important;
-}
-
-.hero-btn-outline {
-  border: 2px solid var(--glass-border) !important;
-  color: var(--text-main) !important;
-}
-
-.hero-btn-outline:hover {
-  background: var(--glass-border) !important;
-  border-color: var(--primary-color) !important;
-}
-
 /* Navbar */
 #header.header-scrolled {
   background: rgba(5, 5, 5, 0.8) !important;
