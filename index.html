@@ -30,9 +30,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
   <script>
-    // Apply theme immediately. Default is dark, switch to light if chosen.
-    if (localStorage.getItem('theme') === 'light') {
+    // Apply theme immediately. Default is dark.
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light') {
       document.getElementById('dark-theme-style').setAttribute('disabled', 'true');
+    } else {
+      // Default to dark if no theme is set
+      if (!currentTheme) {
+        localStorage.setItem('theme', 'dark');
+      }
     }
   </script>
 
@@ -64,8 +70,8 @@
               <i class="bi bi-sun-fill fs-5 theme-icon"></i>
             </button>
           </li>
-          <i class="bi bi-list mobile-nav-toggle"></i>
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
@@ -82,9 +88,9 @@
             <h1 class="hero-title mb-4">I am Balamurugan R</h1>
           </div>
           <p class="hero-subtitle animate-in"><span class="typed" data-typed-items="Flutter Developer, Mobile App Engineer, Cross-Platform Specialist"></span></p>
-          <div class="hero-cta mt-5 animate-in">
-            <a href="#work" class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-3 js-scroll hero-btn-main shadow-lg">View My Work</a>
-            <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 js-scroll hero-btn-outline shadow-lg">Contact Me</a>
+          <div class="hero-cta mt-5 animate-in d-flex flex-column flex-md-row justify-content-center">
+            <a href="#work" class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-md-3 mb-3 mb-md-0 js-scroll hero-btn-main shadow-lg">View My Work</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 js-scroll hero-btn-outline contectbtn shadow-lg">Contact Me</a>
           </div>
         </div>
       </div>
@@ -274,22 +280,23 @@
         <div class="row">
           <div class="col-md-4">
             <div class="work-box">
-              <a href="assets/img/unnamed.webp" data-gallery="portfolioGallery" class="portfolio-lightbox">
+              <a href="assets/img/classMate.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="assets/img/unnamed.webp" alt="" class="img-fluid">
+                  <img src="assets/img/classMate.jpg" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">B5apps</h2>
+                    <h2 class="w-title">ClassMate</h2>
+                    <h4 class="w-more">(owned by EIBS)</h4>
                     <div class="w-more">
-                      <span class="w-ctegory">android apps development and publish play store (B5apps),</span>
+                      <span class="w-ctegory">flutter(android & ios)</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a href="https://play.google.com/store/apps/dev?id=4993787391818994441">
+                      <a href="https://play.google.com/store/apps/details?id=com.eapl.classmate" target="_blank">
                         <span class="bi bi-link-45deg"></span></a>
                     </div>
                   </div>

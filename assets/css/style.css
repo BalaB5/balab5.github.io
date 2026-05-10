@@ -30,7 +30,8 @@
 }
 
 section {
-  scroll-margin-top: 110px; /* Adjust for sticky header height */
+  scroll-margin-top: 110px;
+  /* Adjust for sticky header height */
 }
 
 body {
@@ -40,7 +41,12 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-main);
   font-weight: 700;
 }
@@ -88,7 +94,8 @@ a:hover {
 .paralax-mf {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
-.mybox{
+
+.mybox {
   height: 100%;
 }
 
@@ -99,8 +106,8 @@ a:hover {
 }
 
 /* Ensure columns in rows stretch children to full height */
-.portfolio-mf .row, 
-.services-mf .row, 
+.portfolio-mf .row,
+.services-mf .row,
 .blog-mf .row,
 #work .row,
 #service .row {
@@ -108,11 +115,11 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.portfolio-mf .row > [class*="col-"], 
-.services-mf .row > [class*="col-"], 
-.blog-mf .row > [class*="col-"],
-#work .row > [class*="col-"],
-#service .row > [class*="col-"] {
+.portfolio-mf .row>[class*="col-"],
+.services-mf .row>[class*="col-"],
+.blog-mf .row>[class*="col-"],
+#work .row>[class*="col-"],
+#service .row>[class*="col-"] {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -147,6 +154,12 @@ a:hover {
 @media (max-width: 1024px) {
   .bg-image {
     background-attachment: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+ .contectbtn {
+    margin-top: 20px;
   }
 }
 
@@ -197,7 +210,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   background-color: #f8fafc;
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.25) 0px, transparent 50%),
     radial-gradient(at 50% 0%, rgba(168, 85, 247, 0.25) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.25) 0px, transparent 50%);
@@ -219,7 +232,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, transparent 0%, rgba(255,255,255,0.2) 100%);
+  background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.2) 100%);
   z-index: 2;
 }
 
@@ -564,7 +577,7 @@ a:hover {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transform: rotate(45deg);
   transition: 0.6s;
 }
@@ -606,6 +619,16 @@ a:hover {
   padding: 20px 0;
 }
 
+@media (max-width: 768px) {
+  #header {
+    padding: 12px 0;
+  }
+
+  #header .logo {
+    font-size: 20px !important;
+  }
+}
+
 #header .logo {
   font-size: 24px;
   margin: 0;
@@ -616,7 +639,7 @@ a:hover {
 }
 
 #header .logo a {
-  color: #fff;
+  color: #020617;
 }
 
 #header .logo img {
@@ -641,6 +664,10 @@ a:hover {
 #header.header-scrolled .navbar a:hover,
 #header.header-scrolled .navbar .active {
   color: var(--primary-color) !important;
+}
+
+#header.header-scrolled .mobile-nav-toggle {
+  color: #fff !important;
 }
 
 /*--------------------------------------------------------------
@@ -675,7 +702,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #ffffff;
+  color: #020617;
   font-size: 14px;
   font-weight: 600;
   padding: 0;
@@ -788,7 +815,7 @@ a:hover {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #020617;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -799,6 +826,9 @@ a:hover {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   .navbar ul {
@@ -926,9 +956,10 @@ a:hover {
 .hero .hero-title {
   color: #020617;
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: clamp(2.2rem, 8vw, 3.5rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -1126,7 +1157,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.02);
+  background: rgba(0, 0, 0, 0.02);
   padding: 1.5rem;
 }
 
@@ -1616,7 +1647,7 @@ a:hover {
   margin: 0;
 }
 
-.progress-bar{
+.progress-bar {
   background-color: #4f46e5;
 }
 
@@ -1668,4 +1699,3 @@ a:hover {
 }
 
 /* Remove old overrides */
-

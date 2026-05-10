@@ -28,7 +28,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3
 
 const isDarkMode = () => !document.getElementById('dark-theme-style').hasAttribute('disabled');
 
-const getParticleColor = () => isDarkMode() ? '#8b5cf6' : '#4f46e5';
+const getParticleColor = () => '#8b5cf6';
 
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.02,

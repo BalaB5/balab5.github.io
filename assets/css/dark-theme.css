@@ -9,6 +9,7 @@
   --text-muted: #94a3b8;
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-blur: blur(12px);
+  color-scheme: dark;
 }
 
 body {
@@ -39,10 +40,6 @@ body {
   backdrop-filter: blur(15px) !important;
 }
 
-.navbar a, .navbar a:focus {
-  color: #ffffff !important;
-}
-
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
   color: var(--primary-color) !important;
 }
@@ -57,4 +54,25 @@ body {
   border-color: var(--primary-color) !important;
   color: var(--text-main) !important;
   background: rgba(79, 70, 229, 0.1) !important;
+}
+
+/* Mobile Nav Dark Mode */
+.navbar-mobile ul {
+  background-color: #0a0a0a !important;
+}
+
+.navbar-mobile a, .navbar-mobile a:focus {
+  color: #f8fafc !important;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  color: #f8fafc !important;
+}
+
+.navbar-mobile .dropdown ul {
+  background-color: #1a1a1a !important;
+}
+
+.navbar-mobile .dropdown ul a {
+  color: #94a3b8 !important;
 }
