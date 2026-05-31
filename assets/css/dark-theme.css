@@ -1,78 +1,69 @@
-/* Modern Premium Dark Theme Overrides - Unified with Three.js & Glassmorphism */
 :root {
-  --primary-color: #4f46e5;
-  --secondary-color: #06b6d4;
-  --accent-color: #8b5cf6;
-  --bg-dark: #050505;
-  --bg-card: rgba(255, 255, 255, 0.05);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: blur(12px);
+  --primary: #FAFAFA;
+  --secondary: #A1A1AA;
+  --accent: #3B82F6;
+  --accent-light: #60A5FA;
+  --accent-subtle: rgba(59, 130, 246, 0.15);
+  --bg: #0A0A0B;
+  --bg-card: #18181B;
+  --text: #FAFAFA;
+  --text-muted: #A1A1AA;
+  --border: #27272A;
+  --glass-bg: rgba(10, 10, 11, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
   color-scheme: dark;
 }
 
-body {
-  background-color: var(--bg-dark) !important;
-  color: var(--text-main) !important;
+#header {
+  background: var(--glass-bg);
 }
 
-/* Glassmorphism Cards */
-.box-shadow-full, .service-box, .work-box, .card-blog {
-  background: var(--bg-card) !important;
-  backdrop-filter: var(--glass-blur) !important;
-  -webkit-backdrop-filter: var(--glass-blur) !important;
-  border: 1px solid var(--glass-border) !important;
-  color: var(--text-main) !important;
+.hero .overlay-itro {
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg) 80%);
 }
 
-.box-shadow-full:hover, .service-box:hover, .work-box:hover, .card-blog:hover {
-  border-color: var(--primary-color) !important;
-}
-
-.line-mf, .title-left:before {
-  background: var(--primary-color) !important;
-}
-
-/* Navbar */
-#header.header-scrolled {
-  background: rgba(5, 5, 5, 0.8) !important;
-  backdrop-filter: blur(15px) !important;
+.hero-badge {
+  background: var(--accent-subtle);
 }
 
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
-  color: var(--primary-color) !important;
+  background: var(--accent-subtle);
 }
 
-.skills-container .badge {
-  border: 1px solid var(--glass-border) !important;
-  background: rgba(255, 255, 255, 0.05) !important;
-  color: var(--text-muted) !important;
+.work-card {
+  background: var(--bg-card);
 }
 
-.skills-container .badge:hover {
-  border-color: var(--primary-color) !important;
-  color: var(--text-main) !important;
-  background: rgba(79, 70, 229, 0.1) !important;
+.edu-card {
+  background: var(--bg-card);
 }
 
-/* Mobile Nav Dark Mode */
-.navbar-mobile ul {
-  background-color: #0a0a0a !important;
+.form-group input, .form-group textarea {
+  background: var(--bg-card);
 }
 
-.navbar-mobile a, .navbar-mobile a:focus {
-  color: #f8fafc !important;
+.works-section {
+  background: var(--bg-card);
 }
 
-.navbar-mobile .mobile-nav-toggle {
-  color: #f8fafc !important;
+.education-section {
+  background: var(--bg);
 }
 
-.navbar-mobile .dropdown ul {
-  background-color: #1a1a1a !important;
+.skill-tag:hover {
+  background: var(--accent-subtle);
 }
 
-.navbar-mobile .dropdown ul a {
-  color: #94a3b8 !important;
+.timeline-dot {
+  border-color: var(--bg-card);
+}
+
+@media (max-width: 991px) {
+  .navbar ul {
+    background: var(--bg-card);
+    border-color: var(--border);
+  }
 }

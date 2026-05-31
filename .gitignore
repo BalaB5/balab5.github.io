@@ -1,0 +1,24 @@
+# OS
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.opencode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Project
+node_modules/
+.env
+*.log
+
+# Flutter web (collegeproject)
+collegeproject/.dart_tool/
+collegeproject/packages/
+collegeproject/build/
+collegeproject/.packages
+collegeproject/.pub/

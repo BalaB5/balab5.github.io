@@ -3,806 +3,571 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balamurugan R — Mobile App Developer</title>
+  <meta name="description" content="Mobile App Developer with 3+ years of experience in Flutter, Android & iOS development.">
+  <meta name="keywords" content="mobile app developer, flutter, android, ios, kotlin, dart, portfolio">
 
-  <title>Bala</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <link rel="icon" href="assets/img/profile.jpeg">
+  <link rel="apple-touch-icon" href="assets/img/profile.jpeg">
 
-  <!-- Favicons -->
-  <link href="assets/img/profile.jpeg" rel="icon">
-  <link href="assets/img/profile.jpeg" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link id="dark-theme-style" href="assets/css/dark-theme.css" rel="stylesheet">
 
-  <!-- GSAP & Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
   <script>
-    // Apply theme immediately. Default is dark.
     const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'light') {
-      document.getElementById('dark-theme-style').setAttribute('disabled', 'true');
+    if (currentTheme === 'dark') {
+      // keep dark theme enabled (default state)
     } else {
-      // Default to dark if no theme is set
+      document.getElementById('dark-theme-style').setAttribute('disabled', 'true');
       if (!currentTheme) {
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme', 'light');
       }
     }
   </script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">Balamurugan R</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container">
+      <div class="logo"><a href="index.html">Balamurugan R</a></div>
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#work">Works</a></li>
-          <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
-          <li><a class="nav-link scrollto" href="#academic">Education</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <ul id="nav-menu">
+          <li><a class="scrollto active" href="#hero">Home</a></li>
+          <li><a class="scrollto" href="#about">About</a></li>
+          <li><a class="scrollto" href="#works">Works</a></li>
+          <li><a class="scrollto" href="#experience">Experience</a></li>
+          <li><a class="scrollto" href="#education">Education</a></li>
+          <li><a class="scrollto" href="#contact">Contact</a></li>
           <li>
-            <button id="theme-toggle" class="nav-link border-0 bg-transparent ms-md-3 theme-toggle-btn"
-              aria-label="Toggle Theme" style="cursor: pointer;">
-              <i class="bi bi-sun-fill fs-5 theme-icon"></i>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="bi bi-sun-fill theme-icon"></i>
             </button>
           </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+        <button class="mobile-nav-toggle bi bi-list" aria-label="Toggle menu"></button>
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route">
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
     <canvas id="three-canvas"></canvas>
     <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <div id="demotext" class="animate-in">
-            <h1 class="hero-title mb-4">I am Balamurugan R</h1>
-          </div>
-          <p class="hero-subtitle animate-in"><span class="typed"
-              data-typed-items="Mobile App Developer, Mobile App Engineer, Cross-Platform Specialist"></span></p>
-          <div class="hero-cta mt-5 animate-in d-flex flex-column flex-md-row justify-content-center">
-            <a href="#work"
-              class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-md-3 mb-3 mb-md-0 js-scroll hero-btn-main shadow-lg">View
-              My Work</a>
-            <a href="#contact"
-              class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 js-scroll hero-btn-outline contectbtn shadow-lg">Contact
-              Me</a>
-          </div>
-        </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title">
+        I'm <span class="gradient-text">Balamurugan R</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="typed" data-typed-items="Mobile App Developer, Mobile App Engineer, Cross-Platform Specialist, Flutter Developer"></span>
+      </p>
+      <div class="hero-cta">
+        <a href="#works" class="btn btn-primary scrollto">View My Work <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline scrollto">Get In Touch <i class="bi bi-chat-dots"></i></a>
       </div>
     </div>
-  </div><!-- End Hero Section -->
+  </section>
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about-section">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                About Me
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
+        <div class="section-header reveal">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Who I Am</h2>
+          <p class="section-desc">A passionate mobile developer crafting seamless cross-platform experiences</p>
         </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <!-- <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/profile.jpeg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div> -->
-                    <div class="col-sm-12 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Balamurugan R</span></p>
-                        <p><span class="title-s">Profile: </span> <span>BE/computer science & engineering</span></p>
-                        <p><span class="title-s">Address: </span> <span>Madurai, Tamilandu</span></p>
-                        <p><span class="title-s">Email: </span> <span>bala0003500@gmail.com</span></p>
-                        <p><span class="title-s">Mobile.No: </span> <span>8608080510</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="about-me pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Executive Summary
-                    </h5>
-                    <p class="lead mt-md-4 mt-0">
-                      Results-driven <strong>Mobile App Developer</strong> with 2.5+ years of experience engineering
-                      scalable, high-performance cross-platform mobile applications for Android and iOS.
-                    </p>
-                    <p class="lead mt-md-2 mt-0">
-                      I specialize in transforming complex business requirements into intuitive, production-ready
-                      applications. My expertise spans clean architecture, REST API integration, state management
-                      (GetX/BLoC), and ensuring rigorous App Store and Play Store compliance.
-                    </p>
-                    <div class="lead mt-md-4 mt-0">
-                      <strong>Key Achievements:</strong>
-                      <ul class="list-ico mb-0 mt-3" style="font-size: 1rem;">
-                        <li>Successfully converted 6 Android applications to iOS with 100% feature parity.</li>
-                        <li>Optimized application performance and stabilized architectures across enterprise
-                          applications.</li>
-                        <li>Published and maintained complex applications on Play Store and App Store with strict
-                          compliance.</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-md-6">
-                  <div class="skills-container pe-md-3">
-                    <p class="title-s mb-4">Technical Proficiencies</p>
-
-                    <div class="skill-category mb-4">
-                      <h6 class="category-title text-uppercase text-muted fw-bold mb-3"
-                        style="letter-spacing: 1px; font-size: 0.8rem;">Framework</h6>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Flutter</span>
-                        <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Jetpack Compose</span>
-                        <span
-                          class="badge bg-dark px-3 py-2 rounded-pill shadow-sm border border-secondary text-light">Laravel</span>
-                        <span
-                          class="badge bg-dark px-3 py-2 rounded-pill shadow-sm border border-secondary text-light">Node
-                          JS</span>
-                        <span
-                          class="badge bg-dark px-3 py-2 rounded-pill shadow-sm border border-secondary text-light">Django</span>
-                        <span
-                          class="badge bg-dark px-3 py-2 rounded-pill shadow-sm border border-secondary text-light">Google
-                          ADK</span>
-
-                      </div>
-                    </div>
-
-                    <div class="skill-category mb-4">
-                      <h6 class="category-title text-uppercase text-muted fw-bold mb-3"
-                        style="letter-spacing: 1px; font-size: 0.8rem;">Languages & Backend</h6>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-info text-dark px-3 py-2 rounded-pill shadow-sm">Java</span>
-                        <span class="badge bg-info text-dark px-3 py-2 rounded-pill shadow-sm">C</span>
-                        <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Kotlin</span>
-                        <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Dart</span>
-                        <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Python</span>
-                        <span class="badge bg-info text-dark px-3 py-2 rounded-pill shadow-sm">JavaScript</span>
-                        <span class="badge bg-info text-dark px-3 py-2 rounded-pill shadow-sm">HTML/CSS</span>
-                      </div>
-                    </div>
-
-                    <div class="skill-category">
-                      <h6 class="category-title text-uppercase text-muted fw-bold mb-3"
-                        style="letter-spacing: 1px; font-size: 0.8rem;">Tools & Practices</h6>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill shadow-sm">REST API</span>
-                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill shadow-sm">Firebase</span>
-                        <span class="badge bg-light text-dark px-3 py-2 rounded-pill shadow-sm">Git</span>
-                        <span class="badge bg-light text-dark px-3 py-2 rounded-pill shadow-sm">Play Store
-                          Deployment</span>
-                        <span class="badge bg-light text-dark px-3 py-2 rounded-pill shadow-sm">App Store
-                          Compliance</span>
-                        <span class="badge bg-light text-dark px-3 py-2 rounded-pill shadow-sm">Performance
-                          Optimization</span>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="about-grid">
+          <div class="about-image-wrapper reveal reveal-delay-1">
+            <img src="assets/img/profile.jpeg" alt="Balamurugan R" class="about-image">
           </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
+          <div class="about-content reveal reveal-delay-2">
+            <h3>Mobile App Developer</h3>
+            <p>
+              Results-driven <strong>Mobile App Developer</strong> with 3+ years of experience engineering
+              scalable, high-performance cross-platform mobile applications for Android and iOS.
+            </p>
+            <p>
+              I specialize in transforming complex business requirements into intuitive, production-ready
+              applications. My expertise spans clean architecture, REST API integration, state management
+              (GetX/BLoC), and rigorous App Store and Play Store compliance.
+            </p>
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Profile Focus
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-sun-fill"></i></span>
+            <div class="about-info-grid">
+              <div class="about-info-item">
+                <span class="label">Location</span>
+                <span class="value">Madurai, Tamil Nadu</span>
               </div>
-              <div class="service-content">
-                <h2 class="s-title">LANGUAGES</h2>
-                <p class="s-description text-center">
-                  <b>Tamil:</b> Native<br>
-                  <b>English:</b> Professional
-                </p>
+              <div class="about-info-item">
+                <span class="label">Email</span>
+                <span class="value">baladeveloper2002@gmail.com</span>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-hourglass-split"></i></span>
+              <div class="about-info-item">
+                <span class="label">Phone</span>
+                <span class="value">+91 8608080510</span>
               </div>
-              <div class="service-content">
-                <h1 class="s-title">HOBBIES</h1>
-                <p class="s-description text-center">
-                  Astronomy & science articles reading..<br>
-                  Playing with my friends..<br>
-                  <!-- Movies and songs -->
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-slack"></i></span>
-              </div>
-              <div class="service-content">
-                <h1 class="s-title">STRENGTH</h1>
-                <p class="s-description text-center">
-                  I excel as a smart worker, consistently delivering efficient solutions...<br>
-                  <!-- I will give my unwavering commitment to honesty and integrity... -->
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-    </section><!-- End Services Section -->
-
-
-    <!-- ======= Work Session ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Works
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/classMate.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/classMate.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">ClassMate</h2>
-                    <h4 class="w-more">(owned by EIBS)</h4>
-                    <div class="w-more">
-                      <span class="w-ctegory">flutter(android & ios)</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="https://play.google.com/store/apps/details?id=com.eapl.classmate" target="_blank">
-                        <span class="bi bi-link-45deg"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/vandimandi.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/vandimandi.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Vandimandi</h2>
-                    <h4 class="w-more">(owned by sai techno solutions)</h4>
-                    <div class="w-more">
-                      <span class="w-ctegory">flutter(android & ios)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/RMiller_crm.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/RMiller_crm.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">R-miller CRM</h2>
-                    <h4 class="w-more">(owned by sai techno solutions)</h4>
-                    <div class="w-more">
-                      <span class="w-ctegory">flutter(ios)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/Rmiller_d.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/Rmiller_d.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Dhan Anand Miller</h2>
-                    <h4 class="w-more">(owned by sai techno solutions)</h4>
-                    <div class="w-more">
-                      <span class="w-ctegory">flutter(ios)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/Madeusjob.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/Madeusjob.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">MadeUsJob</h2>
-                    <h4 class="w-more">(owned by sai techno solutions)</h4>
-                    <div class="w-more">
-                      <span class="w-ctegory">flutter(android)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/sdj.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/sdj.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">SDJ Gold</h2>
-                    <h4 class="w-more">(owned by sai techno solutions)</h4>
-                    <div class="w-more">
-                      <span class="w-ctegory">flutter(android)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/resumeweb.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/resumeweb.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">My Personal Website</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">HTML, CSS, js, php</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="https://balab5.github.io/">
-                        <span class="bi bi-link-45deg"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/FoodPage.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/FoodPage.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Online Food shop UI </h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">HTML, CSS, Javascript</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="https://balab5.github.io/FoodSite-praject/">
-                        <span class="bi bi-link-45deg"></span></a>
-                    </div>
-                  </div>
-
-                </div>
+              <div class="about-info-item">
+                <span class="label">Languages</span>
+                <span class="value">Tamil (Native), English</span>
               </div>
             </div>
 
+            <!-- <ul class="achievements-list">
+              <li>Converted 6 Android applications to iOS with 100% feature parity</li>
+              <li>Optimized application performance across enterprise applications</li>
+              <li>Published complex applications on Play Store & App Store with strict compliance</li>
+            </ul> -->
 
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/b5jobs.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/b5jobs.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">B5jobs(Web app/ Mobile App) </h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Flutter, HTML, CSS, Javascript, Bootstrap ,Google appsScript</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="https://balab5.github.io/B5Jobs/">
-                        <span class="bi bi-link-45deg"></span></a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Blog Section ======= -->
-    <section id="experience" class="blog-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                EXPERIENCE
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-body mybox">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Mobile App Developer</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="#">EIBS<br>(Jul 2025 - Present | Madurai)</a></h3>
-                <ul class="card-description custom-bullet-list ps-3" style="font-size: 0.95rem;">
-                  <li>Developing and maintaining robust internal business mobile applications.</li>
-                  <li>Currently architecting a <strong>Sales Call Tracker</strong> Android application to optimize sales
-                    monitoring workflows.</li>
-                  <li>Successfully converted <strong>6 complex Android Flutter applications to iOS</strong>, ensuring
-                    complete feature parity and optimal performance.</li>
-                  <li>Managed Apple App Store publishing compliance, navigating strict guidelines for successful
-                    releases.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-body mybox">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Mobile App Developer</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="https://saitechnosolutions.com/">Sai Techno Solutions<br>(Jul 2024 - Jul
-                    2025)</a></h3>
-                <ul class="card-description custom-bullet-list ps-3" style="font-size: 0.95rem;">
-                  <li>Architected and deployed production-grade Flutter applications for both Android and iOS
-                    ecosystems.</li>
-                  <li>Integrated complex REST APIs, drastically improving application responsiveness and data flow.</li>
-                  <li>Collaborated seamlessly with backend teams to scale features securely and efficiently.</li>
-                  <li class="mt-2"><strong>Key Real-world Projects:</strong> Vandimandi, Madeus Jobs, SDJ Gold, Rmiller
-                    CRM, Dhan Anand Miller.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-body mybox">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Software Developer</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="https://graspear.com/">Graspear Solutions Pvt Ltd<br>(Jul 2023 - May
-                    2024)</a></h3>
-                <ul class="card-description custom-bullet-list ps-3" style="font-size: 0.95rem;">
-                  <li>Directed end-to-end mobile app development lifecycle from concept to deployment.</li>
-                  <li>Enhanced application performance and stability through rigorous code optimization and debugging.
-                  </li>
-                  <li>Maintained robust version control using Git and championed collaborative team workflows.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mt-4">
-            <div class="card card-blog">
-              <div class="card-body mybox">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Software Developer Intern</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="https://graspear.com/">Graspear Solutions Pvt Ltd<br>(Jul 2022 - Jul
-                    2023)</a></h3>
-                <ul class="card-description custom-bullet-list ps-3" style="font-size: 0.95rem;">
-                  <li>Developed scalable Flutter mobile application modules with a focus on UI/UX fidelity.</li>
-                  <li>Gained hands-on expertise in API integration, testing, and debugging in a real-world agile
-                    environment.</li>
-                  <li>Solidified foundational knowledge of clean coding, OOP, and modern mobile development best
-                    practices.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Blog Section -->
-
-    <section id="academic" class="blog-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                ACADEMIC HISTORY
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="card card-blog">
-
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Degree : BE.Computer Science and Engineering </h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="https://www.lathamathavan.edu.in/">LathaMathavan Engeering
-                    College(2019-2023)</a></h3>
-                <p class="card-description">
-                  I am done my graduation from Lathamatavan College of Engineering. This graduation is offered under
-                  Anna University...
-                </p>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">School : M.Chatrapatti high school </h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="#">HSC(2018 - 2019)</a></h3>
-                <p class="card-description"></span>
-                  I have done my Higher Secondary Education Govt.Higher Secondary School, M.Chatrapatti, Madurai was
-                  Computer Science.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">School : M.Chatrapatti high school </h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="#">SSLC(2016 - 2017)</a></h3>
-                <p class="card-description"></span>
-                  I have done my SSLC Secondary Education Govt.Higher Secondary School, M.Chatrapatti, Madurai.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Blog Section -->
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
-      style="background-image: url(assets/img/test.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">Get in Touch</h5>
-                    </div>
-                    <div class="more-info">
-                      <ul class="list-ico">
-                        <li>
-                          <span class="bi bi-geo-alt-fill"></span>
-                          Madurai, Tamil Nadu, India
-                        </li>
-                        <li>
-                          <span class="bi bi-phone-fill"></span>
-                          +91 8608080510
-                        </li>
-                        <li>
-                          <span class="bi bi-envelope-fill"></span>
-                          baladeveloper2002@gmail.com
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li>
-                          <a href="https://github.com/BalaB5" target="_blank"><span class="ico-circle"><i
-                                class="bi bi-github"></i></span></a>
-                        </li>
-                        <li>
-                          <a href="https://www.linkedin.com/in/balamurugan0035" target="_blank"><span
-                              class="ico-circle"><i class="bi bi-linkedin"></i></span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
+            <p style="margin-top:24px;font-weight:600;font-size:14px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Technical Proficiencies</p>
+            <div class="skills-grid">
+              <span class="skill-tag highlight">Flutter</span>
+              <span class="skill-tag highlight">Dart</span>
+              <span class="skill-tag highlight">Kotlin</span>
+              <span class="skill-tag">Android</span>
+              <span class="skill-tag">iOS</span>
+              <span class="skill-tag">Swift</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">REST API</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GetX/BLoC</span>
+              <span class="skill-tag">Laravel</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Play Store</span>
+              <span class="skill-tag">App Store</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Contact Section -->
 
-  </main><!-- End #main -->
+    <!-- ===== PROFILE FOCUS ===== -->
+    <section class="profile-focus">
+      <div class="container">
+        <div class="profile-focus-grid">
+          <div class="focus-card reveal reveal-delay-1">
+            <div class="focus-icon"><i class="bi bi-translate"></i></div>
+            <h4>Languages</h4>
+            <p><strong>Tamil:</strong> Native<br><strong>English:</strong> Professional</p>
+          </div>
+          <div class="focus-card reveal reveal-delay-2">
+            <div class="focus-icon"><i class="bi bi-stars"></i></div>
+            <h4>Hobbies</h4>
+            <p>Astronomy & science reading<br>Playing with friends</p>
+          </div>
+          <div class="focus-card reveal reveal-delay-3">
+            <div class="focus-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h4>Strengths</h4>
+            <p>Smart worker delivering efficient solutions with unwavering commitment to quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== WORKS ===== -->
+    <section id="works" class="works-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title">Featured Works</h2>
+          <p class="section-desc">Mobile applications built with Flutter for Android & iOS platforms</p>
+        </div>
+        <div class="works-grid">
 
+          <div class="work-card reveal reveal-delay-1">
+            <div class="work-image">
+              <img src="assets/img/classMate.jpg" alt="ClassMate">
+              <div class="work-overlay">
+                <a href="https://play.google.com/store/apps/details?id=com.eapl.classmate" target="_blank" aria-label="View ClassMate"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/classMate.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview ClassMate"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>ClassMate</h3>
+              <span class="work-client">owned by EIBS</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>Android</span>
+                <span>iOS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-2">
+            <div class="work-image">
+              <img src="assets/img/vandimandi.jpg" alt="Vandimandi">
+              <div class="work-overlay">
+                <a href="assets/img/vandimandi.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview Vandimandi"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Vandimandi</h3>
+              <span class="work-client">owned by Sai Techno Solutions</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>Android</span>
+                <span>iOS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-3">
+            <div class="work-image">
+              <img src="assets/img/RMiller_crm.jpg" alt="R-miller CRM">
+              <div class="work-overlay">
+                <a href="assets/img/RMiller_crm.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview R-miller CRM"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>R-miller CRM</h3>
+              <span class="work-client">owned by Sai Techno Solutions</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>iOS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-1">
+            <div class="work-image">
+              <img src="assets/img/Rmiller_d.jpg" alt="Dhan Anand Miller">
+              <div class="work-overlay">
+                <a href="assets/img/Rmiller_d.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview Dhan Anand Miller"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Dhan Anand Miller</h3>
+              <span class="work-client">owned by Sai Techno Solutions</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>iOS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-2">
+            <div class="work-image">
+              <img src="assets/img/Madeusjob.jpg" alt="MadeUsJob">
+              <div class="work-overlay">
+                <a href="assets/img/Madeusjob.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview MadeUsJob"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>MadeUsJob</h3>
+              <span class="work-client">owned by Sai Techno Solutions</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>Android</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-3">
+            <div class="work-image">
+              <img src="assets/img/sdj.jpg" alt="SDJ Gold">
+              <div class="work-overlay">
+                <a href="assets/img/sdj.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview SDJ Gold"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>SDJ Gold</h3>
+              <span class="work-client">owned by Sai Techno Solutions</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>Android</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-1">
+            <div class="work-image">
+              <img src="assets/img/resumeweb.png" alt="Personal Website">
+              <div class="work-overlay">
+                <a href="https://balab5.github.io/" class="portfolio-lightbox" aria-label="Preview Personal Website"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Personal Website</h3>
+              <div class="work-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-2">
+            <div class="work-image">
+              <img src="assets/img/FoodPage.png" alt="Online Food Shop UI">
+              <div class="work-overlay">
+                <a href="https://balab5.github.io/FoodSite-praject/" target="_blank" aria-label="View Food Shop UI"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Online Food Shop UI</h3>
+              <div class="work-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-card reveal reveal-delay-3">
+            <div class="work-image">
+              <img src="assets/img/b5jobs.png" alt="B5jobs">
+              <div class="work-overlay">
+                <a href="https://balab5.github.io/B5Jobs/" target="_blank" aria-label="View B5jobs"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>B5jobs</h3>
+              <span class="work-client">Web & Mobile App</span>
+              <div class="work-tags">
+                <span>Flutter</span>
+                <span>HTML</span>
+                <span>Bootstrap</span>
+                <span>Apps Script</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Career</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-desc">Professional journey building mobile applications</p>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="role">Mobile App Developer</span>
+              <h3>EIBS</h3>
+              <span class="period">Jul 2025 — Present &middot; Madurai</span>
+              <ul>
+                <li>Developing and maintaining robust internal business mobile applications.</li>
+                <li>Architecting a <strong>Sales Call Tracker</strong> Android application to optimize sales monitoring.</li>
+                <li>Converted <strong>6 Android Flutter applications to iOS</strong> with full feature parity.</li>
+                <li>Managed Apple App Store publishing compliance for successful releases.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="role">Mobile App Developer</span>
+              <h3>Sai Techno Solutions</h3>
+              <span class="period">Jul 2024 — Jul 2025</span>
+              <ul>
+                <li>Architected and deployed production-grade Flutter applications for Android and iOS.</li>
+                <li>Integrated complex REST APIs, improving application responsiveness and data flow.</li>
+                <li>Collaborated with backend teams to scale features securely and efficiently.</li>
+                <li><strong>Key projects:</strong> Vandimandi, Madeus Jobs, SDJ Gold, Rmiller CRM, Dhan Anand Miller.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="role">Software Developer</span>
+              <h3>Graspear Solutions Pvt Ltd</h3>
+              <span class="period">Jul 2023 — May 2024</span>
+              <ul>
+                <li>Directed end-to-end mobile app development lifecycle from concept to deployment.</li>
+                <li>Enhanced application performance through rigorous code optimization and debugging.</li>
+                <li>Maintained robust version control using Git and championed collaborative workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="role">Software Developer Intern</span>
+              <h3>Graspear Solutions Pvt Ltd</h3>
+              <span class="period">Jul 2022 — Jul 2023</span>
+              <ul>
+                <li>Developed scalable Flutter mobile application modules with focus on UI/UX fidelity.</li>
+                <li>Gained hands-on expertise in API integration, testing, and debugging in agile environment.</li>
+                <li>Solidified foundational knowledge of clean coding, OOP, and modern mobile development.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Education</span>
+          <h2 class="section-title">Academic History</h2>
+          <p class="section-desc">My educational background and qualifications</p>
+        </div>
+        <div class="edu-grid">
+
+          <div class="edu-card reveal reveal-delay-1">
+            <span class="degree">Bachelor of Engineering</span>
+            <h3>Computer Science & Engineering</h3>
+            <span class="school">LathaMathavan Engineering College (2019—2023)<br>Affiliated to Anna University</span>
+            <p>Completed graduation in Computer Science and Engineering with a focus on software development and modern programming paradigms.</p>
+          </div>
+
+          <div class="edu-card reveal reveal-delay-2">
+            <span class="degree">Higher Secondary (HSC)</span>
+            <h3>Computer Science</h3>
+            <span class="school">Govt. Higher Secondary School, M.Chatrapatti (2018—2019)</span>
+            <p>Completed Higher Secondary Education with Computer Science as the major subject.</p>
+          </div>
+
+          <div class="edu-card reveal reveal-delay-3">
+            <span class="degree">Secondary (SSLC)</span>
+            <h3>Secondary School Leaving Certificate</h3>
+            <span class="school">Govt. Higher Secondary School, M.Chatrapatti (2016—2017)</span>
+            <p>Completed secondary education with a strong foundation in science and mathematics.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-desc">Have a project in mind? Let's work together</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal reveal-delay-1">
+            <h3>Let's talk about everything!</h3>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="text">
+                  <span class="label">Location</span>
+                  <span>Madurai, Tamil Nadu, India</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon"><i class="bi bi-phone-fill"></i></div>
+                <div class="text">
+                  <span class="label">Phone</span>
+                  <span>+91 8608080510</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon"><i class="bi bi-envelope-fill"></i></div>
+                <div class="text">
+                  <span class="label">Email</span>
+                  <span>baladeveloper2002@gmail.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/BalaB5" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/balamurugan0035" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <form action="forms/contact.php" method="post" class="contact-form reveal reveal-delay-2" role="form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" id="name" placeholder="Ravi" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" name="email" id="email" placeholder="ravi@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" placeholder="Project Collaboration">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Message <i class="bi bi-send-fill"></i>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Balamurugan R. Built with passion for mobile development.</p>
+    </div>
+  </footer>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-
-
-  <!-- Template Main JS File -->
+  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/three-scene.js"></script>
-  <script src="assets/js/noprint.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-
 
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
     document.addEventListener('DOMContentLoaded', () => {
       const themeToggleBtn = document.getElementById('theme-toggle');
       const darkThemeLink = document.getElementById('dark-theme-style');
       const icon = themeToggleBtn.querySelector('i');
-
-      // Check current theme state on load to set correct icon
       if (localStorage.getItem('theme') === 'light') {
         icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
       }
-
       themeToggleBtn.addEventListener('click', () => {
         const isDisabled = darkThemeLink.hasAttribute('disabled');
-
-        // Add simple transition effect
-        document.body.style.transition = 'background-color 0.4s ease, color 0.4s ease';
-
         if (isDisabled) {
-          // Switch to Dark
           darkThemeLink.removeAttribute('disabled');
           localStorage.setItem('theme', 'dark');
           icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
         } else {
-          // Switch to Light
           darkThemeLink.setAttribute('disabled', 'true');
           localStorage.setItem('theme', 'light');
           icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
         }
-
-        // Remove transition after it's done so resizing etc isn't delayed
-        setTimeout(() => {
-          document.body.style.transition = '';
-        }, 400);
       });
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      revealElements.forEach(el => observer.observe(el));
     });
   </script>
 
