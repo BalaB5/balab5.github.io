@@ -61,6 +61,28 @@
   border-color: var(--bg-card);
 }
 
+.filter-btn {
+  background: var(--bg-card);
+}
+
+.work-card.featured-genai {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.08) 0%, var(--bg-card) 100%);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.feature-item-box {
+  background: #121214;
+}
+
+.interactive-demo-card {
+  background: #121214;
+}
+
+.prompt-bubble {
+  background: rgba(59, 130, 246, 0.12);
+  color: #F3F4F6;
+}
+
 @media (max-width: 991px) {
   .navbar ul {
     background: var(--bg-card);
