@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>R. Balamurugan — Flutter Developer</title>
+  <title>R. Balamurugan — Mobile App Developer</title>
   <meta name="description" content="Flutter and Dart developer with 3+ years of experience building production Android and iOS apps, REST API integrations, and real-time WebSocket features.">
   <meta name="keywords" content="R. Balamurugan, Flutter developer, Dart, Android, iOS, REST APIs, WebSockets, FastAPI, portfolio">
 
@@ -72,7 +72,7 @@
         <span class="typed" data-typed-items="Flutter Developer, Dart Developer, Cross-Platform Mobile Developer, Android &amp; iOS Developer"></span>
       </p>
       <div class="hero-cta">
-        <a href="#works" class="btn btn-primary scrollto">View My Work <i class="bi bi-arrow-right"></i></a>
+        <a href="#works" class="btn btn-primary scrollto">View Projects <i class="bi bi-arrow-right"></i></a>
         <a href="#contact" class="btn btn-outline scrollto">Get In Touch <i class="bi bi-chat-dots"></i></a>
       </div>
     </div>
@@ -177,19 +177,19 @@
       <div class="container">
         <div class="profile-focus-grid">
           <div class="focus-card reveal reveal-delay-1">
-            <div class="focus-icon"><i class="bi bi-translate"></i></div>
-            <h4>Languages</h4>
-            <p><strong>Tamil:</strong> Native<br><strong>English:</strong> Professional</p>
+            <div class="focus-icon"><i class="bi bi-code-square"></i></div>
+            <h4>Python & Full-Stack</h4>
+            <p><strong>Backend:</strong> Python, Django, REST APIs, FastAPI<br><strong>Data & DB:</strong> Pandas, MySQL, SQLAlchemy, ORM<br><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Angular</p>
           </div>
           <div class="focus-card reveal reveal-delay-2">
             <div class="focus-icon"><i class="bi bi-stars"></i></div>
-            <h4>Hobbies</h4>
-            <p>Astronomy & science reading<br>Playing with friends</p>
+            <h4>GenAI & LLM Integration</h4>
+            <p><strong>AI Tools:</strong> ChatGPT, Claude, Gemini<br><strong>Architecture:</strong> Prompt Eng, MCP Server Tools, RAG<br><strong>Integration:</strong> Real-time Tool Calling & LLM APIs</p>
           </div>
           <div class="focus-card reveal reveal-delay-3">
-            <div class="focus-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-            <h4>Strengths</h4>
-            <p>Smart worker delivering efficient solutions with unwavering commitment to quality.</p>
+            <div class="focus-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <h4>Location & Availability</h4>
+            <p><strong>Base:</strong> Madurai, Tamil Nadu (South TN)<br><strong>Work Mode:</strong> Available for Work from Office in Madurai<br><strong>Strengths:</strong> Smart worker, clean OOP & design patterns</p>
           </div>
         </div>
       </div>
@@ -205,7 +205,72 @@
         </div>
         <div class="works-grid">
 
-          <div class="work-card reveal reveal-delay-1">
+          <!-- Gen AI Project 1: DocuQuery AI -->
+          <div class="work-card featured-genai filter-genai reveal reveal-delay-1">
+            <span class="featured-pill"><i class="bi bi-stars"></i> Gen AI &bull; RAG</span>
+            <div class="work-image">
+              <img src="assets/img/ai1.png" alt="DocuQuery AI - Project Document & Requirement Search">
+              <div class="work-overlay">
+                <button type="button" onclick="openProjectModal('docsearch')" aria-label="View Details"><i class="bi bi-info-circle"></i></button>
+                <a href="assets/img/ai1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview DocuQuery AI"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>DocuQuery AI</h3>
+              <span class="work-client">Project Document & Requirement Search</span>
+              <p class="work-desc">
+                High-precision semantic search and requirement extraction over complex PRDs, SRS, and engineering docs using vector embeddings, hybrid search, and LLM reasoning.
+              </p>
+              <div class="work-tags">
+                <span class="ai-tag">LangChain</span>
+                <span class="ai-tag">RAG & Vector DB</span>
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>ChromaDB</span>
+                <span>OpenAI / Gemini</span>
+              </div>
+              <div class="work-card-footer">
+                <button class="btn-detail-link" onclick="openProjectModal('docsearch')">
+                  Explore Architecture & Demo <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gen AI Project 2: HR AI Agent (MCP) -->
+          <div class="work-card featured-genai filter-genai reveal reveal-delay-2">
+            <span class="featured-pill mcp-pill"><i class="bi bi-cpu"></i> MCP Server Tools</span>
+            <div class="work-image">
+              <img src="assets/img/ai2.png" alt="HR AI Agent - MCP Server Integration">
+              <div class="work-overlay">
+                <button type="button" onclick="openProjectModal('hrmcp')" aria-label="View Details"><i class="bi bi-info-circle"></i></button>
+                <a href="assets/img/ai2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Preview HR AI Agent"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>HR AI Assistant (MCP)</h3>
+              <span class="work-client">Real-Time Employee & Salary Intelligence</span>
+              <p class="work-desc">
+                Enterprise HR agent built with Model Context Protocol (MCP) server tools. Securely queries live employee compensation bands, salary analytics, and HRMS records with role-based access.
+              </p>
+              <div class="work-tags">
+                <span class="ai-tag">Model Context Protocol</span>
+                <span class="ai-tag">AI Agents</span>
+                <span>Function Calling</span>
+                <span>Python</span>
+                <span>PostgreSQL</span>
+                <span>FastAPI</span>
+              </div>
+              <div class="work-card-footer">
+                <button class="btn-detail-link" onclick="openProjectModal('hrmcp')">
+                  Explore Architecture & Tools <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile App 1: ClassMate -->
+          <div class="work-card filter-mobile reveal reveal-delay-3">
             <div class="work-image">
               <img src="assets/img/classMate.jpg" alt="ClassMate">
               <div class="work-overlay">
@@ -216,6 +281,7 @@
             <div class="work-body">
               <h3>ClassMate</h3>
               <span class="work-client">owned by EIBS</span>
+              <p class="work-desc">Educational and student management cross-platform mobile application.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>Android</span>
@@ -224,7 +290,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-2">
+          <!-- Mobile App 2: Vandimandi -->
+          <div class="work-card filter-mobile reveal reveal-delay-1">
             <div class="work-image">
               <img src="assets/img/vandimandi.jpg" alt="Vandimandi">
               <div class="work-overlay">
@@ -234,6 +301,7 @@
             <div class="work-body">
               <h3>Vandimandi</h3>
               <span class="work-client">owned by Sai Techno Solutions</span>
+              <p class="work-desc">Vehicle marketplace and commercial transport mobile application.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>Android</span>
@@ -242,7 +310,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-3">
+          <!-- Mobile App 3: R-miller CRM -->
+          <div class="work-card filter-mobile reveal reveal-delay-2">
             <div class="work-image">
               <img src="assets/img/RMiller_crm.jpg" alt="R-miller CRM">
               <div class="work-overlay">
@@ -252,6 +321,7 @@
             <div class="work-body">
               <h3>R-miller CRM</h3>
               <span class="work-client">owned by Sai Techno Solutions</span>
+              <p class="work-desc">Customer relationship and lead management application built for iOS.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>iOS</span>
@@ -259,7 +329,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-1">
+          <!-- Mobile App 4: Dhan Anand Miller -->
+          <div class="work-card filter-mobile reveal reveal-delay-3">
             <div class="work-image">
               <img src="assets/img/Rmiller_d.jpg" alt="Dhan Anand Miller">
               <div class="work-overlay">
@@ -269,6 +340,7 @@
             <div class="work-body">
               <h3>Dhan Anand Miller</h3>
               <span class="work-client">owned by Sai Techno Solutions</span>
+              <p class="work-desc">Enterprise operations and order tracking mobile application for iOS.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>iOS</span>
@@ -276,7 +348,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-2">
+          <!-- Mobile App 5: MadeUsJob -->
+          <div class="work-card filter-mobile reveal reveal-delay-1">
             <div class="work-image">
               <img src="assets/img/Madeusjob.jpg" alt="MadeUsJob">
               <div class="work-overlay">
@@ -286,6 +359,7 @@
             <div class="work-body">
               <h3>MadeUsJob</h3>
               <span class="work-client">owned by Sai Techno Solutions</span>
+              <p class="work-desc">Job portal and hiring application connecting job seekers with recruiters.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>Android</span>
@@ -293,7 +367,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-3">
+          <!-- Mobile App 6: SDJ Gold -->
+          <div class="work-card filter-mobile reveal reveal-delay-2">
             <div class="work-image">
               <img src="assets/img/sdj.jpg" alt="SDJ Gold">
               <div class="work-overlay">
@@ -303,6 +378,7 @@
             <div class="work-body">
               <h3>SDJ Gold</h3>
               <span class="work-client">owned by Sai Techno Solutions</span>
+              <p class="work-desc">Jewellery catalogue, gold rates, and scheme management mobile application.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>Android</span>
@@ -310,7 +386,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-1">
+          <!-- Web Project 1: Personal Website -->
+          <div class="work-card filter-web reveal reveal-delay-3">
             <div class="work-image">
               <img src="assets/img/resumeweb.png" alt="Personal Website">
               <div class="work-overlay">
@@ -319,6 +396,8 @@
             </div>
             <div class="work-body">
               <h3>Personal Website</h3>
+              <span class="work-client">Personal Portfolio</span>
+              <p class="work-desc">Modern responsive portfolio website with Three.js particle dynamics and dark mode.</p>
               <div class="work-tags">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -327,7 +406,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-2">
+          <!-- Web Project 2: Online Food Shop UI -->
+          <div class="work-card filter-web reveal reveal-delay-1">
             <div class="work-image">
               <img src="assets/img/FoodPage.png" alt="Online Food Shop UI">
               <div class="work-overlay">
@@ -336,6 +416,8 @@
             </div>
             <div class="work-body">
               <h3>Online Food Shop UI</h3>
+              <span class="work-client">Web Application</span>
+              <p class="work-desc">Interactive online restaurant and food delivery ordering interface.</p>
               <div class="work-tags">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -344,7 +426,8 @@
             </div>
           </div>
 
-          <div class="work-card reveal reveal-delay-3">
+          <!-- Web Project 3: B5jobs -->
+          <div class="work-card filter-web filter-mobile reveal reveal-delay-2">
             <div class="work-image">
               <img src="assets/img/b5jobs.png" alt="B5jobs">
               <div class="work-overlay">
@@ -353,7 +436,8 @@
             </div>
             <div class="work-body">
               <h3>B5jobs</h3>
-              <span class="work-client">Web & Mobile App</span>
+              <span class="work-client">Web & Mobile Application</span>
+              <p class="work-desc">Cross-platform jobs portal backed by Apps Script and responsive layout.</p>
               <div class="work-tags">
                 <span>Flutter</span>
                 <span>HTML</span>
@@ -384,11 +468,10 @@
               <h3>EIBS</h3>
               <span class="period">Jul 2025 — Present &middot; Madurai</span>
               <ul>
-                <li>Own the full lifecycle of internal business mobile apps, from planning and development to release and post-release iteration.</li>
-                <li>Migrated <strong>6 Flutter Android applications to iOS</strong> with full feature parity and published them on the Apple App Store, meeting compliance requirements.</li>
-                <li>Building a <strong>Sales Call Tracker</strong> Android app for real-time sales monitoring with WebSocket live updates.</li>
-                <li>Improve app performance through systematic profiling, debugging, and code optimization.</li>
-                <li>Ship business features in a modular Clean Architecture/MVVM codebase using Bloc, Riverpod, and Provider across Android and iOS.</li>
+                <li>Developing and maintaining robust internal business mobile applications.</li>
+                <li>Architecting a <strong>Sales Call Tracker</strong> Android application to optimize sales monitoring.</li>
+                <li>Converted <strong>6 Android Flutter applications to iOS</strong> with full feature parity.</li>
+                <li>Managed Apple App Store publishing compliance for successful releases.</li>
               </ul>
             </div>
           </div>
@@ -396,13 +479,13 @@
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="role">Flutter Developer</span>
+              <span class="role">Mobile App Developer</span>
               <h3>Sai Techno Solutions</h3>
               <span class="period">Jul 2024 — Jul 2025</span>
               <ul>
-                <li>Designed, developed, published, and optimized production Flutter apps for Android and iOS.</li>
-                <li>Integrated REST APIs with robust error handling and local caching for offline support, and built streaming features with real-time WebSocket communication.</li>
-                <li>Collaborated with backend teams to deliver maintainable features, supported by unit, widget, and integration tests and CI/CD build and release pipelines.</li>
+                <li>Architected and deployed production-grade Flutter applications for Android and iOS.</li>
+                <li>Integrated complex REST APIs, improving application responsiveness and data flow.</li>
+                <li>Collaborated with backend teams to scale features securely and efficiently.</li>
                 <li><strong>Key projects:</strong> Vandimandi, Madeus Jobs, SDJ Gold, Rmiller CRM, Dhan Anand Miller.</li>
               </ul>
             </div>
@@ -415,9 +498,9 @@
               <h3>Graspear Solutions Pvt Ltd</h3>
               <span class="period">Jul 2023 — Mar 2024</span>
               <ul>
-                <li>Managed the end-to-end mobile development lifecycle for assigned modules.</li>
-                <li>Improved performance through code optimization and architectural improvements.</li>
-                <li>Fixed critical bugs, improved module stability, and collaborated with the team using Git.</li>
+                <li>Directed end-to-end mobile app development lifecycle from concept to deployment.</li>
+                <li>Enhanced application performance through rigorous code optimization and debugging.</li>
+                <li>Maintained robust version control using Git and championed collaborative workflows.</li>
               </ul>
             </div>
           </div>
@@ -429,9 +512,9 @@
               <h3>Graspear Solutions Pvt Ltd</h3>
               <span class="period">Jul 2022 — Jul 2023</span>
               <ul>
-                <li>Built and tested Flutter app modules from the ground up.</li>
-                <li>Assisted with debugging, REST API integration, and UI implementation.</li>
-                <li>Strengthened knowledge of OOP, clean coding, and mobile development best practices.</li>
+                <li>Developed scalable Flutter mobile application modules with focus on UI/UX fidelity.</li>
+                <li>Gained hands-on expertise in API integration, testing, and debugging in agile environment.</li>
+                <li>Solidified foundational knowledge of clean coding, OOP, and modern mobile development.</li>
               </ul>
             </div>
           </div>
@@ -453,7 +536,7 @@
           <div class="edu-card reveal reveal-delay-1">
             <span class="degree">Bachelor of Engineering</span>
             <h3>Computer Science & Engineering</h3>
-            <span class="school">Latha Mathavan Engineering College (2019—2023)<br>Affiliated to Anna University</span>
+            <span class="school">LathaMathavan Engineering College (2019—2023)<br>Affiliated to Anna University</span>
             <p>Completed graduation in Computer Science and Engineering with a focus on software development and modern programming paradigms.</p>
           </div>
 
@@ -541,6 +624,21 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== PROJECT DETAILS MODAL ===== -->
+    <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="project-modal">
+        <div class="modal-header-bar">
+          <h3 id="modal-title">Project Overview</h3>
+          <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close modal">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div id="modal-content-container" class="modal-body-content">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </div>
 
   </main>
 

@@ -125,7 +125,7 @@
     docsearch: {
       title: "DocuQuery AI — Smart Requirement & Project Document Search Engine",
       subtitle: "Generative AI • RAG Architecture • Vector Search • Requirement Intelligence",
-      image: "assets/img/genai-doc-search.jpg",
+      image: "assets/img/ai1.png",
       description: "DocuQuery AI is an intelligent enterprise document retrieval and requirement analysis engine. It processes complex project specifications, PRDs (Product Requirement Documents), SRS documents, and engineering architectures. Powered by modern vector embeddings and LLM reasoning, it empowers engineers, product managers, and QA teams to perform deep semantic requirement searches, uncover specification gaps, and generate automated test acceptance criteria instantly.",
       features: [
         {
@@ -159,7 +159,7 @@
     hrmcp: {
       title: "HR AI Assistant — Real-Time MCP Server Tool Integration",
       subtitle: "Model Context Protocol (MCP) • Autonomous AI Agents • Live HRMS Data • Secure Tool Calling",
-      image: "assets/img/genai-hr-mcp.jpg",
+      image: "assets/img/ai2.png",
       description: "HR AI Assistant is an enterprise-grade autonomous Generative AI agent built using the Model Context Protocol (MCP). It bridges large language models directly with backend HRMS databases and payroll infrastructure. Rather than relying on static or outdated information, the agent autonomously plans and calls MCP tools in real-time to query employee profiles, live salary compensation bands, department structures, leave balances, and performance trends with strict role-based access control (RBAC).",
       features: [
         {
